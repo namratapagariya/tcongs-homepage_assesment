@@ -1,4 +1,4 @@
-# Tcongs Infotech — Homepage
+# Tcongs Infotech — Homepage(assesment)
 
 Interactive marketing homepage for **Tcongs Infotech**, built with React, Vite, and Tailwind CSS. Features an interactive 3D globe (Three.js / React Three Fiber), smooth scroll-based animations, and a custom "air wisp" cursor trail.
 
