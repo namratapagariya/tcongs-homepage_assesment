@@ -162,9 +162,9 @@ export default function Globe() {
       initial={{ opacity: 0, scale: 0.92 }}
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 1 }}
-      className="relative h-[720px] w-[720px]"
+      className="relative mx-auto aspect-square w-full max-w-[720px]"
     >
-      <div className="absolute inset-0 rounded-full bg-cyan-500/10 blur-[140px]" />
+      <div className="absolute inset-0 rounded-full bg-cyan-500/10 blur-[80px] sm:blur-[110px] md:blur-[140px]" />
 
       <Canvas camera={{ position: [0, 0, 6.5], fov: 40 }}>
         <ambientLight intensity={1.2} />
@@ -183,13 +183,15 @@ export default function Globe() {
         />
       </Canvas>
 
-      <div className="pointer-events-none absolute left-1/2 top-1/2 h-[560px] w-[560px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-cyan-400/15" />
-      <div className="pointer-events-none absolute left-1/2 top-1/2 h-[640px] w-[640px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-cyan-400/10" />
+      {/* decorative rings — sized as a % of the container, so they scale
+          automatically with it instead of needing their own breakpoints */}
+      <div className="pointer-events-none absolute left-1/2 top-1/2 h-[78%] w-[78%] -translate-x-1/2 -translate-y-1/2 rounded-full border border-cyan-400/15" />
+      <div className="pointer-events-none absolute left-1/2 top-1/2 h-[89%] w-[89%] -translate-x-1/2 -translate-y-1/2 rounded-full border border-cyan-400/10" />
 
       <div className="pointer-events-none absolute inset-0 rounded-full bg-gradient-to-tr from-transparent via-cyan-400/5 to-white/10 blur-3xl" />
 
-      <div className="pointer-events-none absolute left-1/2 top-1/2 h-[760px] w-[760px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-cyan-400/5" />
-      <div className="pointer-events-none absolute left-1/2 top-1/2 h-[820px] w-[820px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-cyan-400/5 blur-[180px]" />
+      <div className="pointer-events-none absolute left-1/2 top-1/2 h-[106%] w-[106%] -translate-x-1/2 -translate-y-1/2 rounded-full border border-cyan-400/5" />
+      <div className="pointer-events-none absolute left-1/2 top-1/2 h-[114%] w-[114%] -translate-x-1/2 -translate-y-1/2 rounded-full bg-cyan-400/5 blur-[90px] sm:blur-[130px] md:blur-[180px]" />
     </motion.div>
   );
 }
